@@ -1,13 +1,21 @@
 /* Базовый шрифт */
 
-$standard-font: "Open Sans", "Verdana", sans-serif;
-$font-size: 16px;
-$line-height: 28px;
+$standard-font: "Fira Sans", "Verdana", sans-serif;
+$font-size: 15px;
+$line-height: 1.7;
+
+$heading-font: "Montserrat", "Verdana", sans-serif;
+$heading-size: 40px;
+$heading-height: 49px;
+
+$extra-font: "Raleway", "Verdana", sans-serif;
+$extra-size: 21px;
+$extra-height: 25px;
 
 $font-normal: 400;
-$font-light: 300;
-$font-semibold: 600;
+$font-medium: 500;
 $font-bold: 700;
+$font-extrabold: 800;
 
 /* Точки перехода */
 
@@ -25,43 +33,45 @@ $retina-dppx: 1.5dppx;
 /* Основные цвета */
 
 $white: #ffffff;
-$black: #000000;
-$dark: #131314;
-$gray: #1c1c1c;
-$gray-light: #f6f6f6;
-$gray-lighten: #f6f7f9;
-$gray-dark: #1f1f1f;
-
-$turquoise: #0ad9c6;
+$dark: #484848;
+$gray: #ebebeb;
+$blue: #1fc0fc;
+$yellow: #ffc341;
+$yellow-light: #ffd701;
+$gradient: linear-gradient(108.42deg, $yellow 20.46%, $yellow-light 65.31%);
 
 /* Основные цвета фонов */
 
 $background-color: $white;
-$background-color--gray: $gray-light;
-$background-color--gray-light: $gray-lighten;
-$background-color--dark: $dark;
+$background-color--gray: rgba($gray, 0.95);
 
 /* Основные цвета текста */
 
-$color--base: $black;
-$color--light: $gray;
+$color--base: rgba($dark, 0.87);
+$color--light: rgba($dark, 0.5);
 $color--white: $white;
-$color--dark: $gray-dark;
-
-$color--bright: $turquoise;
-
-/* Основные цвета ссылок */
+$color--dark: $dark;
+$color--emphasis: $blue;
+$color--accent: $yellow;
 
 /* Основные цвета кнопок */
 
-$btn-background: $turquoise;
-$btn-background--hover: lighten($turquoise, 10);
+$btn-background: $gradient;
+$btn-background--hover: linear-gradient(109.15deg, $yellow -50.3%, $yellow-light 63.1%);
+$btn-background--active: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(109.15deg, $yellow -50.3%, $yellow-light 63.1%);
 
 $btn-color: $color--base;
 
 /* Свойства полей ввода */
-$input-color: $gray;
 
-$input-border: 1px solid #c9ccd4;
-
+$input-color: $color--base;
+$input-border: 2px solid #e3e3e3;
 $input-background: $background-color;
+$input-error-color: rgba(#ff0000, 0.5);
+
+/* Тени */
+
+$shadow-icon: 0 1px 4px rgba(0, 0, 0, 0.05);
+$shadow-text: 0 1px 4px rgba(0, 0, 0, 0.12);
+$shadow-bubble: 0 3px 12px rgba(0, 0, 0, 0.1);
+$shadow-text: 0 1px 4px rgba(0, 0, 0, 0.12);

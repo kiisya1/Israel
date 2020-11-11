@@ -4,3 +4,10 @@
 
   list-style: none;
 }
+
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}

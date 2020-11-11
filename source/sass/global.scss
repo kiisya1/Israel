@@ -1,5 +1,12 @@
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -13,7 +20,7 @@ body {
   line-height: $line-height;
   text-align: left;
   color: $color--base;
-  font-weight: $font-light;
+  font-weight: $font-normal;
 
   background-color: $background-color;
 }
