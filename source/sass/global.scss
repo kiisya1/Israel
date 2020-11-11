@@ -1,0 +1,36 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-width: $mobile-only-width;
+  height: 100%;
+
+  font-family: $standard-font;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-align: left;
+  color: $color--base;
+  font-weight: $font-light;
+
+  background-color: $background-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+/* Стили для корректного отображения кнопок в состоянии active в IE */
+
+button:active span,
+button:active svg {
+  position: relative;
+  top: 0;
+  left: 0;
+}

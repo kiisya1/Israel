@@ -1,0 +1,45 @@
+/* Подключение шрифтов */
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("OpenSans-Light"),
+    local("Open Sans Light"),
+    url("../fonts/opensans-light.woff2") format("woff2"),
+    url("../fonts/opensans-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("OpenSans-Regular"),
+    local("Open Sans Regular"),
+    url("../fonts/opensans-regular.woff2") format("woff2"),
+    url("../fonts/opensans-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("OpenSans-SemiBold"),
+    local("Open Sans SemiBold"),
+    url("../fonts/opensans-semibold.woff2") format("woff2"),
+    url("../fonts/opensans-semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("OpenSans-Bold"),
+    local("Open Sans Bold"),
+    url("../fonts/opensans-bold.woff2") format("woff2"),
+    url("../fonts/opensans-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
