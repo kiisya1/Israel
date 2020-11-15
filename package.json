@@ -50,6 +50,8 @@
     "node": "8.15"
   },
   "dependencies": {
-    "del": "^4.1.1"
+    "del": "^4.1.1",
+    "focus-trap": "^6.1.4",
+    "tabbable": "^5.1.3"
   }
 }

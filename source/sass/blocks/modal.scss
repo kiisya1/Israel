@@ -1,0 +1,128 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: $background-color--gray;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.modal__body {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  padding: 27px;
+  width: 480px;
+  min-height: 521px;
+
+  background-color: $background-color;
+  box-shadow: 0 8px 24px -12px $dark;
+  border-radius: 8px;
+
+  transform: translate(-50%, -50%);
+}
+
+.modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 0;
+  width: 28px;
+  height: 27px;
+
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px; /* Убирает скругление углов кнопок по умолчанию в Edge */
+
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $yellow-light;
+  }
+
+  &:active {
+    border: 2px solid $yellow-light;
+  }
+}
+
+.modal__close-svg {
+  fill: none;
+}
+
+.modal__title {
+  margin: 0;
+  padding: 0;
+
+  font-family: $heading-font;
+  font-size: 28px;
+  line-height: 34px;
+  color: $color--emphasis;
+  font-weight: $font-bold;
+  letter-spacing: -0.02em;
+}
+
+.modal__description {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: $mobile-width) {
+  .modal {
+    min-height: 100vh;
+
+    background-color: $background-color;
+
+    &--closed {
+      display: none;
+    }
+  }
+
+  .modal__body {
+    position: static;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 16px;
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: $background-color;
+    box-shadow: none;
+    border-radius: 0;
+
+    transform: translate(0, 0);
+  }
+
+  .modal__close {
+    position: absolute;
+    top: 19px;
+    right: 19px;
+  }
+
+  .modal__title {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+  }
+
+  .modal__description {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+  }
+}

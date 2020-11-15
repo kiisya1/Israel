@@ -1,0 +1,35 @@
+.success {
+  text-align: center;
+}
+
+.success__svg {
+  display: block;
+  margin: 0 auto;
+  margin-top: 66px;
+  margin-bottom: 32px;
+
+  fill: none;
+}
+
+.success__title {
+  margin: 0 auto;
+  margin-bottom: 16px;
+  width: 360px;
+}
+
+.success__description {
+  margin: 0 auto;
+  margin-bottom: 32px;
+  width: 360px;
+}
+
+.success__button {
+  margin: 0 auto;
+}
+
+@media (max-width: $mobile-width) {
+  .success__title,
+  .success__description {
+    width: 288px;
+  }
+}

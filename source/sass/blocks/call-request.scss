@@ -1,0 +1,37 @@
+.call-request__body {
+  padding-bottom: 40px;
+}
+
+.call-request__title {
+  margin: 0;
+  margin-top: 2px;
+  margin-left: 21px;
+  margin-bottom: 16px;
+}
+
+.call-request__description {
+  margin-bottom: 32px;
+  margin-left: 21px;
+  width: 360px;
+
+  line-height: 26px;
+}
+
+@media (max-width: $mobile-width) {
+  .call-request__body {
+    padding-bottom: 16px;
+  }
+
+  .call-request__title {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  .call-request__description {
+    margin-bottom: 32px;
+    margin-left: 0;
+    width: 288px;
+
+    line-height: 160%;
+  }
+}

@@ -19,7 +19,7 @@
   </head>
   <body>
 
-    <div class="sprite">
+    <div class="visually-hidden">
       <include src="build/img/sprite.svg"></include>
     </div>
 
@@ -40,7 +40,7 @@
               <a class="contacts__link" href="tel:+97226216581">+ (972) 2 – 621 – 6581</a>
             </li>
             <li class="contacts__item">
-              <a class="contacts__link contacts__link--dotted-line" href="#">заказать звонок</a>
+              <a class="contacts__link contacts__link--dotted-line" href="#" id="callback_link">заказать звонок</a>
             </li>
           </ul>
         </section>
@@ -53,7 +53,7 @@
       <main class="wrapper__main">
         <section class="about">
           <h2 class="about__title title">О программе</h2>
-          <p class="about__description">&laquo;Маса&raquo;&nbsp;&mdash; совместный проект правительства Израиля и&nbsp;Еврейского агентства Сохнут. Более 250 учебных программ (60&nbsp;на русском) и&nbsp;возможность стажировки в&nbsp;Израиле. В&nbsp;течение освоения программ предусмотрен грант от&nbsp;4200 до&nbsp;8400$.</p>
+          <p class="about__description">&laquo;Маса&raquo;&nbsp;&mdash; совместный проект правительства Израиля и&nbsp;Еврейского агентства Сохнут. Более 250 учебных программ (60&nbsp;на русском) и&nbsp;возможность стажировки в&nbsp;Израиле. В&nbsp;течение освоения программ предусмотрен грант от&nbsp;4200 до&nbsp;8400$.</p>
           <div class="about__video video">
             <picture>
               <source type="image/webp" srcset="img/video@1x.webp 1x, img/video@2x.webp 2x">
@@ -128,7 +128,7 @@
             <div class="go__input-field">
               <label>
                 <span class="visually-hidden">Номер телефона</span>
-                <input type="tel" name="phone" placeholder="Телефон" pattern="[0-9]{10,11}" required>
+                <input type="tel" name="phone" placeholder="Телефон" id="go-phone-field" pattern="\+7\s?[\(]{1}[0-9]{3}[\)]{1}\s?\d{3}\s?\d{2}\s?\d{2}" required>
               </label>
             </div>
 
@@ -154,7 +154,7 @@
 
         <section class="life">
           <h2 class="life__title title">Жизнь в Израиле</h2>
-          <p class="life__description">Помимо учёбы, в&nbsp;рамках программе у&nbsp;вас будет возможность путешествовать по&nbsp;стране и познакомиться с&nbsp;богатой культурно-исторической жизнью Израиля и&nbsp;его жителей.</p>
+          <p class="life__description">Помимо учёбы, в&nbsp;рамках программе у&nbsp;вас будет возможность путешествовать по&nbsp;стране и познакомиться с&nbsp;богатой культурно-исторической жизнью Израиля и&nbsp;его жителей.</p>
           <ul class="life__list">
             <li class="life__item">
               <a class="life__link" href="#">
@@ -191,9 +191,9 @@
                 <picture>
                   <source type="image/webp" srcset="img/life-4@1x.webp 1x, img/life-4@2x.webp 2x">
                     <!--по высоте 1х: 400px; 2x: 800px -->
-                  <img src="img/life-4@1x.png" srcset="img/life-4@2x.png 2x" width="411" height="318" alt="Совместные творческие проекты с израильской молодёжью" data-object-fit="cover">
+                  <img src="img/life-4@1x.png" srcset="img/life-4@2x.png 2x" width="411" height="318" alt="Совместные творческие проекты  с израильской молодёжью" data-object-fit="cover">
                 </picture>
-                <h3>Совместные творческие проекты с&nbsp;израильской молодёжью</h3>
+                <h3>Совместные творческие проекты  с&nbsp;израильской молодёжью</h3>
               </a>
             </li>
             <li class="life__item">
@@ -304,8 +304,8 @@
                   <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" width="364" height="480" alt="Ольга Михайлова">
                 </picture>
                 <cite class="blockquote__author">
-                  <p class="blockquote__name">Ольга Михайлова</p>
-                  <p class="blockquote__program"><span class="blockquote__program-highlight">Программа:</span>Арт-Тель, февраль-сетнябрь 2017</p>
+                  <span class="blockquote__name">Ольга Михайлова</span>
+                  <span class="blockquote__program"><span class="blockquote__program-highlight">Программа:</span>Арт-Тель, февраль-сетнябрь 2017</span>
                 </cite>
                 <p class="blockquote__content">Долго выбирая программу, на&nbsp;которую ехать&nbsp;&mdash; я&nbsp;определилась, взяла на&nbsp;5&nbsp;месяцев &laquo;иврит как культура&raquo;. Мне очень повезло оказаться в&nbsp;надежных и&nbsp;заботливых руках Анны, Юлии и&nbsp;Олега.</p>
                 <p class="blockquote__content">С&nbsp;первой&nbsp;же встречи тебе дают понять&nbsp;&mdash; что ты&nbsp;не&nbsp;один, у&nbsp;тебя есть практически круглосуточная поддержка по&nbsp;любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а&nbsp;еще и&nbsp;поездки всей программой в&nbsp;разные уголки страны.</p>
@@ -320,8 +320,8 @@
                   <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" width="364" height="480" alt="Ольга Михайлова">
                 </picture>
                 <cite class="blockquote__author">
-                  <p class="blockquote__name">Ольга Михайлова</p>
-                  <p class="blockquote__program"><span class="blockquote__program-highlight">Программа:</span>Арт-Тель, февраль-сетнябрь 2017</p>
+                  <span class="blockquote__name">Ольга Михайлова</span>
+                  <span class="blockquote__program"><span class="blockquote__program-highlight">Программа:</span>Арт-Тель, февраль-сетнябрь 2017</span>
                 </cite>
                 <p class="blockquote__content">Долго выбирая программу, на&nbsp;которую ехать&nbsp;&mdash; я&nbsp;определилась, взяла на&nbsp;5&nbsp;месяцев &laquo;иврит как культура&raquo;. Мне очень повезло оказаться в&nbsp;надежных и&nbsp;заботливых руках Анны, Юлии и&nbsp;Олега.</p>
                 <p class="blockquote__content">С&nbsp;первой&nbsp;же встречи тебе дают понять&nbsp;&mdash; что ты&nbsp;не&nbsp;один, у&nbsp;тебя есть практически круглосуточная поддержка по&nbsp;любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а&nbsp;еще и&nbsp;поездки всей программой в&nbsp;разные уголки страны.</p>
@@ -336,8 +336,8 @@
                   <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" width="364" height="480" alt="Ольга Михайлова">
                 </picture>
                 <cite class="blockquote__author">
-                  <p class="blockquote__name">Ольга Михайлова</p>
-                  <p class="blockquote__program"><span class="blockquote__program-highlight">Программа:</span>Арт-Тель, февраль-сетнябрь 2017</p>
+                  <span class="blockquote__name">Ольга Михайлова</span>
+                  <span class="blockquote__program"><span class="blockquote__program-highlight">Программа:</span>Арт-Тель, февраль-сетнябрь 2017</span>
                 </cite>
                 <p class="blockquote__content">Долго выбирая программу, на&nbsp;которую ехать&nbsp;&mdash; я&nbsp;определилась, взяла на&nbsp;5&nbsp;месяцев &laquo;иврит как культура&raquo;. Мне очень повезло оказаться в&nbsp;надежных и&nbsp;заботливых руках Анны, Юлии и&nbsp;Олега.</p>
                 <p class="blockquote__content">С&nbsp;первой&nbsp;же встречи тебе дают понять&nbsp;&mdash; что ты&nbsp;не&nbsp;один, у&nbsp;тебя есть практически круглосуточная поддержка по&nbsp;любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а&nbsp;еще и&nbsp;поездки всей программой в&nbsp;разные уголки страны.</p>
@@ -352,8 +352,8 @@
                   <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" width="364" height="480" alt="Ольга Михайлова">
                 </picture>
                 <cite class="blockquote__author">
-                  <p class="blockquote__name">Ольга Михайлова</p>
-                  <p class="blockquote__program"><span class="blockquote__program-highlight">Программа:</span>Арт-Тель, февраль-сетнябрь 2017</p>
+                  <span class="blockquote__name">Ольга Михайлова</span>
+                  <span class="blockquote__program"><span class="blockquote__program-highlight">Программа:</span>Арт-Тель, февраль-сетнябрь 2017</span>
                 </cite>
                 <p class="blockquote__content">Долго выбирая программу, на&nbsp;которую ехать&nbsp;&mdash; я&nbsp;определилась, взяла на&nbsp;5&nbsp;месяцев &laquo;иврит как культура&raquo;. Мне очень повезло оказаться в&nbsp;надежных и&nbsp;заботливых руках Анны, Юлии и&nbsp;Олега.</p>
                 <p class="blockquote__content">С&nbsp;первой&nbsp;же встречи тебе дают понять&nbsp;&mdash; что ты&nbsp;не&nbsp;один, у&nbsp;тебя есть практически круглосуточная поддержка по&nbsp;любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а&nbsp;еще и&nbsp;поездки всей программой в&nbsp;разные уголки страны.</p>
@@ -368,8 +368,8 @@
                   <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" width="364" height="480" alt="Ольга Михайлова">
                 </picture>
                 <cite class="blockquote__author">
-                  <p class="blockquote__name">Ольга Михайлова</p>
-                  <p class="blockquote__program"><span class="blockquote__program-highlight">Программа:</span>Арт-Тель, февраль-сетнябрь 2017</p>
+                  <span class="blockquote__name">Ольга Михайлова</span>
+                  <span class="blockquote__program"><span class="blockquote__program-highlight">Программа:</span>Арт-Тель, февраль-сетнябрь 2017</span>
                 </cite>
                 <p class="blockquote__content">Долго выбирая программу, на&nbsp;которую ехать&nbsp;&mdash; я&nbsp;определилась, взяла на&nbsp;5&nbsp;месяцев &laquo;иврит как культура&raquo;. Мне очень повезло оказаться в&nbsp;надежных и&nbsp;заботливых руках Анны, Юлии и&nbsp;Олега.</p>
                 <p class="blockquote__content">С&nbsp;первой&nbsp;же встречи тебе дают понять&nbsp;&mdash; что ты&nbsp;не&nbsp;один, у&nbsp;тебя есть практически круглосуточная поддержка по&nbsp;любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а&nbsp;еще и&nbsp;поездки всей программой в&nbsp;разные уголки страны.</p>
@@ -384,8 +384,8 @@
                   <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" width="364" height="480" alt="Ольга Михайлова">
                 </picture>
                 <cite class="blockquote__author">
-                  <p class="blockquote__name">Ольга Михайлова</p>
-                  <p class="blockquote__program"><span class="blockquote__program-highlight">Программа:</span>Арт-Тель, февраль-сетнябрь 2017</p>
+                  <span class="blockquote__name">Ольга Михайлова</span>
+                  <span class="blockquote__program"><span class="blockquote__program-highlight">Программа:</span>Арт-Тель, февраль-сетнябрь 2017</span>
                 </cite>
                 <p class="blockquote__content">Долго выбирая программу, на&nbsp;которую ехать&nbsp;&mdash; я&nbsp;определилась, взяла на&nbsp;5&nbsp;месяцев &laquo;иврит как культура&raquo;. Мне очень повезло оказаться в&nbsp;надежных и&nbsp;заботливых руках Анны, Юлии и&nbsp;Олега.</p>
                 <p class="blockquote__content">С&nbsp;первой&nbsp;же встречи тебе дают понять&nbsp;&mdash; что ты&nbsp;не&nbsp;один, у&nbsp;тебя есть практически круглосуточная поддержка по&nbsp;любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а&nbsp;еще и&nbsp;поездки всей программой в&nbsp;разные уголки страны.</p>
@@ -444,7 +444,7 @@
 
       <footer class="wrapper__footer footer">
         <section class="footer__details details">
-          <div classs="details__columns">
+          <div class="details__columns">
             <h2 class="details__title title">Узнать подробности</h2>
             <p class="details__location">
               <span class="details__city">Ваш город:</span>
@@ -496,7 +496,7 @@
               </p>
             </div>
           </div>
-          <div classs="details__columns">
+          <div class="details__columns">
             <picture>
               <source type="image/webp" srcset="img/map@1x.webp 1x, img/map@2x.webp 2x">
                 <!--1х: 702px; 2x: 1404px -->
@@ -504,7 +504,7 @@
             </picture>
           </div>
 
-          <section class="details__callback callback">
+          <section class="details__callback callback callback--oneline">
             <div class="callback__description">
               <p class="callback__text callback__text--bold">Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
               <p class="callback__text">Мы&nbsp;не&nbsp;передаём данные третьим лицам. Ваши данные будут в&nbsp;безопасности и&nbsp;вам не&nbsp;придёт спам от&nbsp;нас!</p>
@@ -520,7 +520,7 @@
               <div class="callback__input-field">
                 <label>
                   <span class="visually-hidden">Номер телефона</span>
-                  <input type="tel" name="phone" placeholder="Телефон" pattern="[0-9]{10,11}" required>
+                  <input type="tel" name="phone" placeholder="Телефон" id="details-phone-field" pattern="\+7\s?[\(]{1}[0-9]{3}[\)]{1}\s?\d{3}\s?\d{2}\s?\d{2}" required>
                 </label>
               </div>
 
@@ -575,7 +575,7 @@
     </div>
 
     <section class="modal modal--closed call-request">
-      <div class="modal__body">
+      <div class="modal__body call-request__body">
         <button class="modal__close" type="button">
           <svg class="modal__close-svg" width="18" height="17">
             <use xlink:href="#icon-close"></use>
@@ -583,35 +583,32 @@
           <span class="visually-hidden">Закрыть окно</span>
         </button>
         <h2 class="modal__title call-request__title">Заказать звонок</h2>
-        <p class="call-request__description">Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение рабочего дня и&nbsp;обязательно поможем найти ответ на&nbsp;ваш вопрос!</p>
+        <p class="modal__description call-request__description">Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение рабочего дня и&nbsp;обязательно поможем найти ответ на&nbsp;ваш вопрос!</p>
 
-        <section class="call-request__callback callback callback--column">
-          <form class="callback__form" action="https://echo.htmlacademy.ru" method="post">
+        <section class="call-request__callback callback">
+          <form class="callback__form" action="https://echo.htmlacademy.ru" method="post" id="callback__modal">
 
             <div class="callback__input-field">
-              <label>
+              <input type="text" name="name" placeholder="имя" id="name-field" required>
+              <label for="name-field">
                 <span class="visually-hidden">Имя</span>
-                <input type="text" name="name" placeholder="Имя" required>
               </label>
             </div>
 
             <div class="callback__input-field">
-              <label>
+              <input type="tel" name="phone" placeholder="телефон" pattern="\+7\s?[\(]{1}[0-9]{3}[\)]{1}\s?\d{3}\s?\d{2}\s?\d{2}" id="phone-field" required>
+              <label for="phone-field">
                 <span class="visually-hidden">Номер телефона</span>
-                <input type="tel" name="phone" placeholder="Телефон" pattern="[0-9]{10,11}" required>
               </label>
             </div>
 
             <button type="submit">
-              <span>Перезвоните мне</span>
+              <span>перезвоните мне</span>
             </button>
 
             <div class="callback__input-field callback__input-field--checkbox">
-              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement-field">
+              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement-field" required>
               <label for="agreement-field">
-                <svg width="16" height="16">
-                  <use xlink:href="#icon-checkbox"></use>
-                </svg>
                 <span>Нажимая на&nbsp;кнопку, вы&nbsp;даёте согласие на&nbsp;обработку персональных данных</span>
               </label>
             </div>
@@ -633,12 +630,17 @@
           <use xlink:href="#icon-ok"></use>
         </svg>
         <h2 class="modal__title success__title">Заявка принята</h2>
-        <p class="success__description">Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
-        <button class="success__button" type="button">
-          <span>Понятно</span>
+        <p class="modal__description success__description">Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+        <button class="success__button button" type="button">
+          <span>понятно</span>
         </button>
       </div>
     </section>
+
+    <!-- Сообщение об ошибке в поле ввода -->
+  <template id="callback__error">
+    <span class="callback__error-message">Ошибка: неверный формат</span>
+  </template>
 
     <script src="js/vendor.js"></script>
     <script src="js/script.js"></script>

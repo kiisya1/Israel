@@ -4,10 +4,14 @@
 @import "mixins.scss";
 @import "global.scss";
 @import "visually-hidden.scss";
-@import "blocks/sprite.scss";
 @import "blocks/wrapper.scss";
 @import "blocks/body-lock.scss";
 @import "blocks/cover.scss";
+@import "blocks/button.scss";
 @import "blocks/logo.scss";
 @import "blocks/contacts.scss";
 @import "blocks/header.scss";
+@import "blocks/modal.scss";
+@import "blocks/call-request.scss";
+@import "blocks/callback.scss";
+@import "blocks/success.scss";
