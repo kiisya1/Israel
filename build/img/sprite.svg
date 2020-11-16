@@ -1,9 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
-<linearGradient id="linear-arrow" x1="60" y1="66.0571" x2="122.968" y2="-4.24813" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC341"/>
-<stop offset="0.963542" stop-color="#FFD701"/>
-</linearGradient>
-
 <linearGradient id="linear_close" x1="4.73684" y1="0.485716" x2="14.6703" y2="3.98809" gradientUnits="userSpaceOnUse">
 <stop stop-color="#FFC341"/>
 <stop offset="0.963542" stop-color="#FFD701"/>
@@ -19,9 +14,6 @@
 </linearGradient>
 </defs><symbol id="icon-arrow-down" viewBox="0 0 17 11">
 <path d="M1 1L8.5 9L16 1" stroke="#1FC0FC" stroke-width="2"/>
-</symbol><symbol id="icon-arrow" viewBox="0 0 228 68">
-<path d="M0 68H198L228 34L198 0H0V68Z" fill="url(#linear-arrow)"/>
-
 </symbol><symbol id="icon-close" viewBox="0 0 18 17">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.48467 8.5L0 1.50703L1.41767 2.46254e-07L9 7.08422L16.5823 0L18 1.50703L10.5153 8.5L18 15.493L16.5823 17L9 9.91578L1.41767 17L6.13436e-07 15.493L7.48467 8.5Z" fill="url(#linear_close)"/>
 

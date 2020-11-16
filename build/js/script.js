@@ -29,6 +29,13 @@
   var storage = '';
   var storageTel = '';
 
+  var tabLinkList = document.querySelector('.programs__tabs-list');
+  var tabLinks = tabLinkList.querySelectorAll('.programs__tabs-link');
+  var tabsList = document.querySelector('.programs__programs-list');
+
+  var ActiveTabClass = 'programs__programs-item--active';
+  var ActiveTabLinkClass = 'programs__tabs-link--active';
+
   /* Проверка доступности localStorage  */
 
   try {
@@ -314,5 +321,53 @@
       inputBlock.removeChild(inputError);
     }
   };
+
+  /* Табы */
+
+  tabsList.classList.remove('programs__programs-list--no-js');
+
+  // Функция переключения таба
+
+  var onLinkClick = function (evt) {
+    evt.preventDefault();
+    var href;
+    var linkSelector;
+
+    var linksArray = Array.from(tabLinks);
+
+    if (linksArray.includes(evt.target)) {
+      href = '#' + evt.target.href.split('#')[1];
+      linkSelector = '.programs__tabs-link[href$=' + evt.target.href.split('#')[1] + ']';
+    } else {
+      var parent = evt.target.parentElement;
+      href = '#' + parent.href.split('#')[1];
+      linkSelector = '.programs__tabs-link[href$=' + parent.href.split('#')[1] + ']';
+    }
+
+    var tab = tabsList.querySelector(href);
+    var link = tabLinkList.querySelector(linkSelector);
+    var activeTab = tabsList.querySelector('.' + ActiveTabClass);
+    var activeTabLink = document.querySelector('.' + ActiveTabLinkClass);
+
+    activeTab.classList.remove(ActiveTabClass);
+    tab.classList.add(ActiveTabClass);
+    activeTabLink.classList.remove(ActiveTabLinkClass);
+    link.classList.add(ActiveTabLinkClass);
+  };
+
+  // Функция добавления обработчика собития на ссылку
+
+  var addLinkClickHandler = function (link) {
+    link.addEventListener('click', onLinkClick);
+  };
+
+  // Добавляем обработчики на все ссылки
+
+  if (tabLinks.length !== 0) {
+    for (var i = 0; i < tabLinks.length; i++) {
+      addLinkClickHandler(tabLinks[i]);
+    }
+  }
+
 
 })();
