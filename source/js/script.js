@@ -3,7 +3,7 @@
 (function () {
 
   var MessageError = 'Ошибка: обязательное поле';
-  var PhoneError = 'Заполните поле в формате + 7 (999) 999 99 99';
+  var PhoneError = 'Формат поля: + 7 (999) 999 99 99';
 
   var createFocusTrap = window.createFocusTrap;
   var onPhoneInputKeydown = window.usePhoneMask;
@@ -19,7 +19,8 @@
   var successModal = document.querySelector('.success');
   var successModalButton = successModal.querySelector('.success__button');
 
-  var goPhoneInput = document.querySelector('#go-phone-field');
+  var goForm = document.querySelector('#go-form');
+  var goPhoneInput = goForm.querySelector('#go-phone-field');
   var detailsPhoneInput = document.querySelector('#details-phone-field');
 
   var callBackFocusTrap = createFocusTrap(callBackModal);
@@ -45,10 +46,16 @@
     isStorageSupport = false;
   }
 
-  // Маска для полей номера телефона
+  // Маска и форма для полей номера телефона
 
-  goPhoneInput.removeEventListener('keydown', onPhoneInputKeydown);
-  detailsPhoneInput.removeEventListener('keydown', onPhoneInputKeydown);
+  goPhoneInput.addEventListener('keydown', onPhoneInputKeydown);
+  goForm.addEventListener('submit', function (evt) {
+    onFormSubmit(evt);
+  });
+  goPhoneInput.addEventListener('keyup', function (evt) {
+    onInput(evt);
+  });
+  detailsPhoneInput.addEventListener('keydown', onPhoneInputKeydown);
 
 
   /* Слушатель события клика по ссылке Заказать звонок */
@@ -145,9 +152,14 @@
     evt.preventDefault();
     openSuccessModal();
 
+    var nameInputField = evt.target.querySelector('input[name="name"]');
+    var phoneInputField = evt.target.querySelector('input[type="tel"]');
+
     if (isStorageSupport) {
-      localStorage.setItem('name', nameInput.value);
-      localStorage.setItem('phone', phoneInput.value);
+      if (nameInputField) {
+        localStorage.setItem('name', nameInputField.value);
+      }
+      localStorage.setItem('phone', phoneInputField.value);
     }
   };
 

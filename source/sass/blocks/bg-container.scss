@@ -1,0 +1,29 @@
+.bg-container {
+  @include push--auto;
+  padding-top: 200px;
+  max-width: 1366px;
+
+  background-color: $background-color;
+  background-image: url("../img/bg-how-life@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-how-life@2x.jpg");
+  }
+}
+
+@media (max-width: 1144px) {
+  .bg-container {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .bg-container {
+    padding-top: 0;
+
+    background: none;
+  }
+}

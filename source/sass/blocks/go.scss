@@ -1,0 +1,99 @@
+.go {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: -48px;
+  padding: 0 calc(50% - 473px);
+  padding-top: 209px;
+  padding-bottom: 112px;
+
+  background-color: $background-color;
+  background-image: url("../img/bg-go@1x.jpg"), url("../img/bg-go-backpack@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top right, top 135px left -73px;
+  background-size: 818px, 220px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-go@2x.jpg"), url("../img/bg-go-backpack@2x.jpg");
+  }
+}
+
+.go__title {
+  margin-bottom: 24px;
+  width: 477px;
+}
+
+.go__description {
+  margin: 0;
+  margin-bottom: 64px;
+  width: 400px;
+
+  font-size: 17px;
+  line-height: 29px;
+}
+
+.go__callback-form {
+  width: 477px;
+  min-height: 86px;
+}
+
+@media (max-width: 1255px) {
+  .go {
+    background-size: 60%, 220px;
+    background-position: center right, top 135px left -73px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .go {
+    margin-bottom: 0;
+    padding: 0 50px;
+    padding-top: 100px;
+    padding-bottom: 70px;
+
+    background-size: 57%, 158px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .go {
+    margin-bottom: 80px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 48px;
+    padding-bottom: 308px;
+
+    background-position: bottom center, top left -55px;
+    background-size: 424px, 158px;
+  }
+
+  .go__title {
+    @include push--auto;
+    width: 286px;
+
+    text-align: center;
+  }
+
+  .go__description {
+    @include push--auto;
+    margin-bottom: 24px;
+    width: calc(100% - 2px);
+    max-width: 400px;
+
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .go__callback-form {
+    @include push--auto;
+    width: calc(100% - 1px);
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .go__description {
+    text-align: left;
+  }
+}

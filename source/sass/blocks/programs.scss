@@ -3,7 +3,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
 
-  margin-bottom: 31px;
+  margin-bottom: 15px;
   padding: 0 calc(50% - 473px);
   padding-top: 48px;
 
@@ -35,6 +35,10 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &:first-child {
+    margin-bottom: 5px;
   }
 }
 
@@ -79,7 +83,6 @@
   }
 
   &--active {
-    margin-top: 5px;
     padding-bottom: 24px;
 
     font-size: 16px;
@@ -306,7 +309,7 @@
 
 @media (max-width: $mobile-width) {
   .programs {
-    margin-bottom: 80px;
+    margin-bottom: 11px;
     padding: 0;
     flex-direction: column;
 
@@ -328,7 +331,7 @@
     justify-content: flex-start;
     align-items: flex-start;
 
-    margin-bottom: 16px;
+    margin-bottom: 11px;
     margin-right: 0;
 
     width: 100%;

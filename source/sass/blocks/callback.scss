@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
   height: auto;
+
+  &--small {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 
 .callback__input-field {
@@ -36,6 +42,7 @@
   line-height: 20px;
   color: $input-color;
   font-weight: $font-medium;
+  text-transform: lowercase;
   font-variant: small-caps;
 
   background-color: $input-background;
@@ -50,7 +57,6 @@
 
   &:hover,
   &:focus {
-    //border: 2px solid transparent;
     outline: none;
   }
 }
@@ -162,6 +168,7 @@
   color: $btn-color;
   font-weight: $font-medium;
   text-align: center;
+  text-transform: lowercase;
   font-variant: small-caps;
   text-shadow: $shadow-text;
 
@@ -181,7 +188,36 @@
   }
 }
 
+.callback__form--small .callback__input-field {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  width: 321px;
+}
+
+.callback__form--small input[type="tel"] {
+  padding-right: 60px;
+  padding-top: 18px;
+  padding-bottom: 17px;
+}
+
+.callback__form--small button[type="submit"] {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  margin-left: -60px;
+  padding-top: 20px;
+  padding-bottom: 19px;
+  width: 216px;
+}
+
 @media (max-width: $mobile-width) {
+  .callback__form {
+    &--small {
+      flex-direction: column;
+    }
+  }
+
   .callback__input-field {
     margin-left: 0;
     width: 288px;
@@ -190,5 +226,19 @@
       margin: 0 auto;
       width: 264px;
     }
+  }
+
+  .callback__form--small .callback__input-field {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  .callback__form--small input[type="tel"] {
+    padding-right: 38px;
+  }
+
+  .callback__form--small button[type="submit"] {
+    @include push--auto;
+    width: 264px;
   }
 }
