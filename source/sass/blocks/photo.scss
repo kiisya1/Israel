@@ -1,0 +1,117 @@
+.photo {
+  margin-bottom: 57px;
+  padding-top: 120px;
+  padding-right: calc(50% - 516px);
+  padding-left: 58.3%;
+  padding-bottom: 196px;
+
+  background-color: #ffd5d5;
+  background-image: url("../img/bg-masaIsrael@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-masaIsrael@2x.jpg");
+  }
+}
+
+.photo__title {
+  margin-bottom: 24px;
+}
+
+.photo__description {
+  margin: 0;
+  margin-bottom: 48px;
+  padding-left: 3px;
+  width: 403px;
+
+  font-size: 17px;
+  line-height: 29px;
+  color: rgba($color--white, 0.87);
+  text-shadow: $shadow-text;
+}
+
+@media (max-width: $tablet-width) {
+  .photo {
+    padding-left: 45%;
+  }
+}
+
+@media (max-width: 820px) {
+  .photo {
+    padding-left: 40%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .photo {
+    margin-bottom: 80px;
+    padding: 0;
+
+    background: none;
+    background-color: $background-color;
+  }
+
+  .photo__title {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -49px;
+    padding: 0 11px;
+
+    font-size: 40px;
+    line-height: 49px;
+
+    background-color: transparent;
+  }
+
+  .photo__description {
+    margin: 0;
+    margin-bottom: 19px;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    padding-left: 23px;
+    padding-right: calc(50% - 217px);
+    width: 100%;
+    min-height: 269px;
+
+    font-size: 16px;
+    line-height: 26px;
+
+    background-color: #ffd5d5;
+    background-image: url("../img/bg-masaIsrael@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 780px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-masaIsrael@2x.jpg");
+    }
+  }
+
+  .photo__link {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 670px) {
+  .photo__description {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 545px) {
+  .photo__title {
+    margin-bottom: -5px;
+  }
+
+  .photo__description {
+    padding-top: 101px;
+    padding-right: 25px;
+    padding-bottom: 38px;
+
+    background-position: top left -71px;
+    background-size: 632px;
+  }
+}

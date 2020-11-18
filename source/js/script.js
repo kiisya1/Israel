@@ -381,5 +381,40 @@
     }
   }
 
+  var sliderContainer = document.querySelector('.swiper-container');
+  var sliderPagination = document.querySelector('.swiper-pagination');
+  var sliderWrapper = document.querySelector('.swiper-wrapper');
+
+  // Добавляем слайдер
+
+  var mySwiper = 0;
+  sliderWrapper.classList.remove('life__list--no-js');
+
+  var initSwiper = function () {
+    var screenWidth = window.innerWidth;
+    if ((screenWidth < (1024)) && (mySwiper === 0)) {
+      sliderPagination.classList.remove('swiper-pagination-lock');
+      mySwiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    } else if ((screenWidth > 850) && (mySwiper !== 0)) {
+      mySwiper.destroy();
+      mySwiper = 0;
+      sliderContainer.classList.remove('swiper-container-initialized');
+      sliderContainer.classList.remove('swiper-container-horizontal');
+      sliderPagination.classList.add('swiper-pagination-lock');
+    }
+  };
+
+  initSwiper();
+
+  window.addEventListener('resize', function () {
+    initSwiper();
+  });
 
 })();

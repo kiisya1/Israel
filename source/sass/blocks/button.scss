@@ -21,6 +21,16 @@
 
   cursor: pointer;
 
+  &--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 18px;
+    padding-bottom: 17px;
+    width: 230px;
+  }
+
   &:hover,
   &:focus {
     background: $btn-background--hover;
@@ -28,5 +38,17 @@
 
   &:active {
     background: $btn-background--active;
+  }
+}
+
+.button-svg {
+  margin-right: 8px;
+}
+
+@media (max-width: $mobile-width) {
+  .button {
+    &--icon {
+      width: 264px;
+    }
   }
 }
