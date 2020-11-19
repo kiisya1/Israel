@@ -5,6 +5,9 @@
   var MessageError = 'Ошибка: обязательное поле';
   var PhoneError = 'Формат поля: + 7 (999) 999 99 99';
 
+  var ActiveTabClass = 'programs__programs-item--active';
+  var ActiveTabLinkClass = 'programs__tabs-link--active';
+
   var createFocusTrap = window.createFocusTrap;
   var onPhoneInputKeydown = window.usePhoneMask;
 
@@ -34,8 +37,12 @@
   var tabLinks = tabLinkList.querySelectorAll('.programs__tabs-link');
   var tabsList = document.querySelector('.programs__programs-list');
 
-  var ActiveTabClass = 'programs__programs-item--active';
-  var ActiveTabLinkClass = 'programs__tabs-link--active';
+  var sliderLifeContainer = document.querySelector('.life__container');
+  var sliderLifePagination = sliderLifeContainer.querySelector('.swiper-pagination');
+  var sliderLifeWrapper = sliderLifeContainer.querySelector('.swiper-wrapper');
+
+  var questionsList = document.querySelector('.questions__list');
+  var questionsButtons = questionsList.querySelectorAll('.questions__question');
 
   /* Проверка доступности localStorage  */
 
@@ -381,20 +388,16 @@
     }
   }
 
-  var sliderContainer = document.querySelector('.swiper-container');
-  var sliderPagination = document.querySelector('.swiper-pagination');
-  var sliderWrapper = document.querySelector('.swiper-wrapper');
-
   // Добавляем слайдер
 
   var mySwiper = 0;
-  sliderWrapper.classList.remove('life__list--no-js');
+  sliderLifeWrapper.classList.remove('life__list--no-js');
 
   var initSwiper = function () {
     var screenWidth = window.innerWidth;
     if ((screenWidth < (1024)) && (mySwiper === 0)) {
-      sliderPagination.classList.remove('swiper-pagination-lock');
-      mySwiper = new Swiper('.swiper-container', {
+      sliderLifePagination.classList.remove('swiper-pagination-lock');
+      mySwiper = new Swiper('.life__container', {
         slidesPerView: 'auto',
         spaceBetween: 30,
         pagination: {
@@ -405,9 +408,9 @@
     } else if ((screenWidth > 850) && (mySwiper !== 0)) {
       mySwiper.destroy();
       mySwiper = 0;
-      sliderContainer.classList.remove('swiper-container-initialized');
-      sliderContainer.classList.remove('swiper-container-horizontal');
-      sliderPagination.classList.add('swiper-pagination-lock');
+      sliderLifeContainer.classList.remove('swiper-container-initialized');
+      sliderLifeContainer.classList.remove('swiper-container-horizontal');
+      sliderLifePagination.classList.add('swiper-pagination-lock');
     }
   };
 
@@ -416,5 +419,60 @@
   window.addEventListener('resize', function () {
     initSwiper();
   });
+
+
+  // Аккордеон
+
+  questionsList.classList.remove('questions__list--no-js');
+  var questionsButtonsArray = Array.from(questionsButtons);
+
+
+  var onQuestionsButtonClick = function (evt) {
+    var element;
+
+    if (questionsButtonsArray.includes(evt.target)) {
+      element = evt.target;
+    } else {
+      element = evt.target.parentElement;
+    }
+
+    if (element.classList.contains('questions__question--active')) {
+      element.classList.remove('questions__question--active');
+    } else {
+      var activeQuestionsButton = questionsList.querySelector('.questions__question--active');
+      if (activeQuestionsButton) {
+        activeQuestionsButton.classList.remove('questions__question--active');
+      }
+      element.classList.add('questions__question--active');
+    }
+  };
+
+  // Функция добавления обработчика собития на кнопку аккордеона
+
+  var addQuestionsButtonClickHandler = function (button) {
+    button.addEventListener('click', onQuestionsButtonClick);
+  };
+
+  // Добавляем обработчики на все кнопки аккордеона
+
+  if (questionsButtons.length !== 0) {
+    for (var j = 0; j < questionsButtons.length; j++) {
+      addQuestionsButtonClickHandler(questionsButtons[j]);
+    }
+  }
+
+  // Инициализируем слайдер блока Отзывы
+
+  var swiper = new Swiper('.reviews__container', {
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.reviews__button--next',
+      prevEl: '.reviews__button--prev',
+    },
+  });
+
 
 })();
