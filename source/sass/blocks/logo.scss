@@ -1,8 +1,13 @@
 .logo {
   display: block;
+  padding-right: 5px;
   width: 137px;
   box-sizing: content-box;
-  padding-right: 5px;
+
+  &--gray {
+    padding: 0;
+    width: 85px;
+  }
 }
 
 .logo__image {
@@ -14,5 +19,9 @@
   .logo {
     width: 120px;
     padding-right: 0;
+
+    &--gray {
+      width: 99px;
+    }
   }
 }

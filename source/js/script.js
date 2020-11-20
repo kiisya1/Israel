@@ -24,6 +24,9 @@
 
   var goForm = document.querySelector('#go-form');
   var goPhoneInput = goForm.querySelector('#go-phone-field');
+
+  var detailsForm = document.querySelector('#details-form');
+  var detailsNameInput = detailsForm.querySelector('#details-name-field');
   var detailsPhoneInput = document.querySelector('#details-phone-field');
 
   var callBackFocusTrap = createFocusTrap(callBackModal);
@@ -41,6 +44,8 @@
   var sliderLifePagination = sliderLifeContainer.querySelector('.swiper-pagination');
   var sliderLifeWrapper = sliderLifeContainer.querySelector('.swiper-wrapper');
 
+  var sliderReviewsContainer = document.querySelector('.reviews__container');
+
   var questionsList = document.querySelector('.questions__list');
   var questionsButtons = questionsList.querySelectorAll('.questions__question');
 
@@ -55,15 +60,37 @@
 
   // Маска и форма для полей номера телефона
 
-  goPhoneInput.addEventListener('keydown', onPhoneInputKeydown);
-  goForm.addEventListener('submit', function (evt) {
-    onFormSubmit(evt);
-  });
-  goPhoneInput.addEventListener('keyup', function (evt) {
-    onInput(evt);
-  });
-  detailsPhoneInput.addEventListener('keydown', onPhoneInputKeydown);
+  if (goPhoneInput) {
+    goPhoneInput.addEventListener('keydown', onPhoneInputKeydown);
+    goPhoneInput.addEventListener('keyup', function (evt) {
+      onInput(evt);
+    });
+  }
 
+  if (goForm) {
+    goForm.addEventListener('submit', function (evt) {
+      onFormSubmit(evt);
+    });
+  }
+
+  if (detailsPhoneInput) {
+    detailsPhoneInput.addEventListener('keydown', onPhoneInputKeydown);
+    detailsPhoneInput.addEventListener('keyup', function (evt) {
+      onInput(evt);
+    });
+  }
+
+  if (detailsForm) {
+    detailsForm.addEventListener('submit', function (evt) {
+      onFormSubmit(evt);
+    });
+  }
+
+  if (detailsNameInput) {
+    detailsNameInput.addEventListener('input', function (evt) {
+      onInput(evt);
+    });
+  }
 
   /* Слушатель события клика по ссылке Заказать звонок */
 
@@ -343,7 +370,9 @@
 
   /* Табы */
 
-  tabsList.classList.remove('programs__programs-list--no-js');
+  if (tabsList) {
+    tabsList.classList.remove('programs__programs-list--no-js');
+  }
 
   // Функция переключения таба
 
@@ -390,8 +419,11 @@
 
   // Добавляем слайдер
 
+  if (sliderLifeWrapper) {
+    sliderLifeWrapper.classList.remove('life__list--no-js');
+  }
+
   var mySwiper = 0;
-  sliderLifeWrapper.classList.remove('life__list--no-js');
 
   var initSwiper = function () {
     var screenWidth = window.innerWidth;
@@ -414,18 +446,21 @@
     }
   };
 
-  initSwiper();
-
-  window.addEventListener('resize', function () {
+  if (sliderLifeContainer) {
     initSwiper();
-  });
 
+    window.addEventListener('resize', function () {
+      initSwiper();
+    });
+  }
 
   // Аккордеон
 
-  questionsList.classList.remove('questions__list--no-js');
-  var questionsButtonsArray = Array.from(questionsButtons);
+  if (questionsList) {
+    questionsList.classList.remove('questions__list--no-js');
+  }
 
+  var questionsButtonsArray = Array.from(questionsButtons);
 
   var onQuestionsButtonClick = function (evt) {
     var element;
@@ -463,16 +498,20 @@
 
   // Инициализируем слайдер блока Отзывы
 
-  var swiper = new Swiper('.reviews__container', {
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
-    },
-    navigation: {
-      nextEl: '.reviews__button--next',
-      prevEl: '.reviews__button--prev',
-    },
-  });
+  if (sliderReviewsContainer) {
+    sliderReviewsContainer.classList.remove('reviews__container--no-js');
+
+    var swiperReviews = new Swiper('.reviews__container', {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.reviews__button--next',
+        prevEl: '.reviews__button--prev',
+      },
+    });
+  }
 
 
 })();

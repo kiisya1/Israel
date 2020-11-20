@@ -304,7 +304,7 @@
 
         <section class="reviews">
           <h2 class="reviews__title title">Отзывы</h2>
-          <div class="reviews__container swiper-container">
+          <div class="reviews__container reviews__container--no-js swiper-container">
             <div class="reviews__list swiper-wrapper">
               <div class="reviews__item swiper-slide">
                 <blockquote class="reviews__blockquote blockquote">
@@ -466,15 +466,15 @@
               <picture>
                 <source type="image/webp" srcset="img/curator@1x.webp 1x, img/curator@2x.webp 2x">
                   <!--1х: 112px; 2x: 224px -->
-                <img class="curator__image" src="img/curator@1x.jpg" srcset="img/curator@2x.jpg 2x" width="112" height="112" alt="Куратор Анна Горелик">
+                <img class="curator__image" src="img/curator@1x.jpg" srcset="img/curator@2x.jpg 2x" width="112" height="112" alt="Куратор Анна Горелик" data-object-fit="cover">
               </picture>
               <div class="curator__about">
                 <p class="curator__name">
-                  <span class="">Ваш куратор:</span>
+                  <span class="curator__name-emphasis">Ваш куратор:</span>
                   Анна Горелик
                 </p>
                 <p class="curator__address">Новосибирск, ул. Щетинкина&nbsp;68, культурный центр &laquo;Бейт Менахем&raquo;</p>
-                <section class="curator__socials socials">
+                <section class="curator__socials socials socials--close">
                   <ul class="socials__list">
                     <li class="socials__item">
                       <a class="socials__link" href="#">
@@ -504,15 +504,15 @@
                 </section>
               </div>
               <p class="curator__description">
-                Куратор является опытным специалистом агентства Сохнут и&nbsp;знает о&nbsp;проекте &laquo;Маса&raquo; всё! Свяжитесь с&nbsp;куратором, узнайте подробнее о&nbsp;программах и&nbsp;выберите свою!
+                Куратор является опытным специалистом агентства Сохнут и&nbsp;знает о&nbsp;проекте &laquo;Маса&raquo; всё! Свяжитесь с&nbsp;куратором,  узнайте подробнее о&nbsp;программах и&nbsp;выберите свою!
               </p>
             </div>
           </div>
-          <div class="details__columns">
+          <div class="details__columns details__columns--map">
             <picture>
               <source type="image/webp" srcset="img/map@1x.webp 1x, img/map@2x.webp 2x">
                 <!--1х: 702px; 2x: 1404px -->
-              <img class="details__map" src="img/map@1x.png" srcset="img/map@2x.png 2x" width="702" height="448" alt="Мы находимся по адресу: Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»">
+              <img class="details__map" src="img/map@1x.png" srcset="img/map@2x.png 2x" width="702" height="448" alt="Мы находимся по адресу: Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»" data-object-fit="cover">
             </picture>
           </div>
 
@@ -521,18 +521,19 @@
               <p class="callback__text callback__text--bold">Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
               <p class="callback__text">Мы&nbsp;не&nbsp;передаём данные третьим лицам. Ваши данные будут в&nbsp;безопасности и&nbsp;вам не&nbsp;придёт спам от&nbsp;нас!</p>
             </div>
-            <form class="callback__form" action="https://echo.htmlacademy.ru" method="post">
+            <form class="callback__form" action="https://echo.htmlacademy.ru" method="post" id="details-form">
+
               <div class="callback__input-field">
-                <label>
+                <input type="text" name="name" placeholder="Имя" id="details-name-field" required>
+                <label for="details-name-field">
                   <span class="visually-hidden">Имя</span>
-                  <input type="text" name="name" placeholder="Имя" required>
                 </label>
               </div>
 
               <div class="callback__input-field">
-                <label>
+                <input type="tel" name="phone" placeholder="Телефон" pattern="\+7\s?[\(]{1}[0-9]{3}[\)]{1}\s?\d{3}\s?\d{2}\s?\d{2}" id="details-phone-field" required>
+                <label for="details-phone-field">
                   <span class="visually-hidden">Номер телефона</span>
-                  <input type="tel" name="phone" placeholder="Телефон" id="details-phone-field" pattern="\+7\s?[\(]{1}[0-9]{3}[\)]{1}\s?\d{3}\s?\d{2}\s?\d{2}" required>
                 </label>
               </div>
 
@@ -554,7 +555,7 @@
           </a>
           <p class="footer__copyright">Copyright someDesignCompany &copy;2019</p>
 
-          <section class="footer__socials socials">
+          <section class="footer__socials socials socials--big">
             <ul class="socials__list">
               <li class="socials__item">
                 <a class="socials__link" href="#">

@@ -211,6 +211,87 @@
   width: 216px;
 }
 
+.callback--oneline {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.callback__description {
+  margin-right: 14px;
+  margin-top: 4px;
+
+  width: 364px;
+}
+
+.callback__text {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 20px;
+  color: $color--light;
+
+  &--bold {
+    margin-bottom: 11px;
+    width: 328px;
+
+    font-size: 17px;
+    line-height: 26px;
+    color: $color--base;
+    font-weight: $font-medium;
+  }
+}
+
+.callback--oneline .callback__form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.callback--oneline .callback__input-field {
+  margin: 0;
+  margin-right: 24px;
+  width: 250px;
+}
+
+.callback--oneline input {
+  padding-top: 18px;
+  padding-bottom: 17px;
+}
+
+.callback--oneline button[type="submit"] {
+  margin: 0;
+  padding: 20px;
+  padding-bottom: 19px;
+  width: 216px;
+}
+
+@media (max-width: 1179px) {
+  .callback--oneline {
+    flex-direction: column;
+  }
+
+  .callback__description {
+    margin-bottom: 24px;
+    width: 700px;
+  }
+}
+
+@media (max-width: 864px) {
+  .callback__description {
+    width: 500px;
+  }
+
+  .callback--oneline .callback__form {
+    flex-wrap: wrap;
+  }
+
+  .callback--oneline button[type="submit"] {
+    margin-top: 16px;
+    width: 250px;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .callback__form {
     &--small {
@@ -240,5 +321,49 @@
   .callback__form--small button[type="submit"] {
     @include push--auto;
     width: 264px;
+  }
+
+  .callback--oneline {
+    margin: 0;
+  }
+
+  .callback__description {
+    margin: 0;
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .callback__text {
+    &--bold {
+      margin-bottom: 12px;
+      width: 100%;
+      max-width: 328px;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .callback--oneline .callback__form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .callback--oneline .callback__input-field {
+    margin-right: 0;
+    margin-bottom: 8px;
+    width: 288px;
+  }
+
+  .callback--oneline button[type="submit"] {
+    width: 264px;
+  }
+}
+
+@media (max-width: 658px) {
+  .callback--oneline {
+    margin: 0 auto;
+    width: 320px;
   }
 }

@@ -152,6 +152,17 @@
   margin-left: auto;
 }
 
+.reviews__container--no-js .reviews__list {
+  display: block;
+}
+
+.reviews__container--no-js .reviews__item {
+  margin-bottom: 20px;
+}
+
+.reviews__container--no-js .reviews__button {
+  display: none;
+}
 
 @media (max-width: $tablet-width) {
   .reviews {
