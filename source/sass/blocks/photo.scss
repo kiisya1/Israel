@@ -32,6 +32,12 @@
   text-shadow: $shadow-text;
 }
 
+@media (max-width: 1050px) {
+  .photo {
+    padding-right: 0;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .photo {
     padding-left: 45%;

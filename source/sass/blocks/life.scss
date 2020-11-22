@@ -124,7 +124,18 @@
   left: 40px;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .life__description {
+    width: 723px;
+  }
+}
+
 @media (max-width: 1151px) {
+  .life {
+    padding: 0 50px;
+    padding-bottom: 34px;
+  }
+
   .life__list {
     justify-content: center;
 

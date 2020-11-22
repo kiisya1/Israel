@@ -152,7 +152,7 @@
   /* Функция закрытия поп-апа Заказать звонок при нажатии на Escape */
 
   var onCallBackKeydown = function (evt) {
-    if (evt.key === 'Escape') {
+    if (evt.keyCode === 27) {
       closeCallBack();
     }
   };
@@ -168,7 +168,7 @@
   /* Функция закрытия поп-апа Заявка принята при нажатии на Escape */
 
   var onSuccessModalKeydown = function (evt) {
-    if (evt.key === 'Escape') {
+    if (evt.keyCode === 27) {
       closeSuccessModal();
     }
   };
@@ -287,13 +287,11 @@
   // Генерирует сообщение об ошибке
 
   var getErrorElement = function (error) {
-    var errorTemplate = document.querySelector('#callback__error')
-        .content
-        .querySelector('.callback__error-message');
-    var errorElement = errorTemplate.cloneNode(true);
-    errorElement.textContent = error;
+    var span = document.createElement('span');
+    span.className = 'callback__error-message';
+    span.textContent = error;
 
-    return errorElement;
+    return span;
   };
 
   // Проверяет поле при вводе
@@ -381,9 +379,9 @@
     var href;
     var linkSelector;
 
-    var linksArray = Array.from(tabLinks);
+    var linksArray = Array.prototype.slice.call(tabLinks, 0);
 
-    if (linksArray.includes(evt.target)) {
+    if (linksArray.indexOf(evt.target) >= 0) {
       href = '#' + evt.target.href.split('#')[1];
       linkSelector = '.programs__tabs-link[href$=' + evt.target.href.split('#')[1] + ']';
     } else {
@@ -460,12 +458,12 @@
     questionsList.classList.remove('questions__list--no-js');
   }
 
-  var questionsButtonsArray = Array.from(questionsButtons);
+  var questionsButtonsArray = Array.prototype.slice.call(questionsButtons, 0);
 
   var onQuestionsButtonClick = function (evt) {
     var element;
 
-    if (questionsButtonsArray.includes(evt.target)) {
+    if (questionsButtonsArray.indexOf(evt.target) >= 0) {
       element = evt.target;
     } else {
       element = evt.target.parentElement;

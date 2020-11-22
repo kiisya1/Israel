@@ -422,3 +422,23 @@
     }
   }
 }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .programs__tabs-link:hover .programs__tabs-text,
+  .programs__tabs-link:focus .programs__tabs-text,
+  .programs__tabs-link:active .programs__tabs-text {
+    color: $yellow;
+
+    background: none;
+  }
+
+  .programs__tabs-link--active:hover .programs__tabs-text,
+  .programs__tabs-link--active:focus .programs__tabs-text,
+  .programs__tabs-link--active:active .programs__tabs-text {
+    color: $color--white;
+
+    background-image: none;
+    background-clip: inherit;
+    -webkit-text-fill-color: $color--white;
+  }
+}

@@ -14,6 +14,8 @@
 </linearGradient>
 </defs><symbol id="icon-arrow-down" viewBox="0 0 17 11">
 <path d="M1 1L8.5 9L16 1" stroke="#1FC0FC" stroke-width="2"/>
+</symbol><symbol id="icon-arrow-left" viewBox="0 0 11 18">
+<path d="M10 1.5L2 9L10 16.5" stroke-width="2"/>
 </symbol><symbol id="icon-close" viewBox="0 0 18 17">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.48467 8.5L0 1.50703L1.41767 2.46254e-07L9 7.08422L16.5823 0L18 1.50703L10.5153 8.5L18 15.493L16.5823 17L9 9.91578L1.41767 17L6.13436e-07 15.493L7.48467 8.5Z" fill="url(#linear_close)"/>
 

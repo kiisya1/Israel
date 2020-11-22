@@ -284,6 +284,8 @@
 
   .callback--oneline .callback__form {
     flex-wrap: wrap;
+
+    width: 644px;
   }
 
   .callback--oneline button[type="submit"] {
@@ -325,6 +327,7 @@
 
   .callback--oneline {
     margin: 0;
+    width: 100%;
   }
 
   .callback__description {
@@ -348,6 +351,8 @@
   .callback--oneline .callback__form {
     flex-direction: column;
     align-items: center;
+
+    width: 100%;
   }
 
   .callback--oneline .callback__input-field {

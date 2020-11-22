@@ -6,13 +6,13 @@
   padding-bottom: 49px;
   min-height: 707px;
 
-  background-image: url("../img/bg-how@1x.png"), url("../img/bg-how-stamp@1x.png");
+  background-image: url("../img/bg-how-stamp@1x.png");
   background-repeat: no-repeat;
-  background-position: top left 12px, top 210px right -121px;
-  background-size: 581px, 337px;
+  background-position: top 210px right -121px;
+  background-size: 337px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-how@1x.png"), url("../img/bg-how-stamp@2x.png");
+    background-image: url("../img/bg-how-stamp@2x.png");
   }
 }
 
@@ -59,7 +59,7 @@
       background-image: $gradient;
       background-repeat: repeat-x;
       background-position: top left;
-      background-size: 2px;
+      background-size: auto;
     }
   }
 }
@@ -148,9 +148,10 @@
 
 @media (max-width: 1144px) {
   .how {
+    padding-right: 20px;
     min-height: auto;
 
-    background-size: 50%, 337px;
+    background-size: 337px;
   }
 }
 

@@ -1,14 +1,1 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="1" y="1" width="14" height="14" rx="1" stroke="url(#linear_checkbox-on1)" stroke-width="2"/>
-<path d="M4 9L7 11L12 5" stroke="url(#linear_checkbox-on2)" stroke-width="2"/>
-<defs>
-<linearGradient id="linear_checkbox-on1" x1="4.21053" y1="0.457144" x2="13.147" y2="3.43295" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC341"/>
-<stop offset="0.963542" stop-color="#FFD701"/>
-</linearGradient>
-<linearGradient id="linear_checkbox-on2" x1="6.10526" y1="5.17143" x2="10.2516" y2="7.01238" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC341"/>
-<stop offset="0.963542" stop-color="#FFD701"/>
-</linearGradient>
-</defs>
-</svg>
+<svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="14" height="14" rx="1" stroke="url(#linear_checkbox-on1)" stroke-width="2"/><path d="M4 9l3 2 5-6" stroke="url(#linear_checkbox-on2)" stroke-width="2"/><defs><linearGradient id="linear_checkbox-on1" x1="4.211" y1=".457" x2="13.147" y2="3.433" gradientUnits="userSpaceOnUse"><stop stop-color="#FFC341"/><stop offset=".964" stop-color="#FFD701"/></linearGradient><linearGradient id="linear_checkbox-on2" x1="6.105" y1="5.171" x2="10.252" y2="7.012" gradientUnits="userSpaceOnUse"><stop stop-color="#FFC341"/><stop offset=".964" stop-color="#FFD701"/></linearGradient></defs></svg>

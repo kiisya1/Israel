@@ -15,6 +15,10 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
     <link rel="preload" href="fonts/firasans-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/raleway-extrabold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/firasans-bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/firasans-medium.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
@@ -58,7 +62,7 @@
             <picture>
               <source type="image/webp" srcset="img/video@1x.webp 1x, img/video@2x.webp 2x">
                 <!-- 1х: 870px; 2x: 1740px -->
-              <img class="video__image" src="img/video@1x.png" srcset="img/video@1x.png 2x" width="870" height="460" data-object-fit="cover" alt="Видео о проекте Маса">
+              <img class="video__image" src="img/video@1x.png" srcset="img/video@1x.png 2x" loading="lazy" width="870" height="460" data-object-fit="cover" alt="Видео о проекте Маса">
             </picture>
             <a class="video__play-button" href="#">
               <span class="visually-hidden">Воспроизвести</span>
@@ -175,7 +179,7 @@
                     <picture>
                       <source type="image/webp" srcset="img/life-1@1x.webp 1x, img/life-1@2x.webp 2x">
                         <!--по высоте 1х: 732px; 2x: 1464px -->
-                      <img src="img/life-1@1x.png" srcset="img/life-1@2x.png 2x" width="482" height="732" alt="Экскурсии по Израилю" data-object-fit="cover">
+                      <img src="img/life-1@1x.png" srcset="img/life-1@2x.png 2x" loading="lazy" width="482" height="732" alt="Экскурсии по Израилю" data-object-fit="cover">
                     </picture>
                     <h3>Экскурсии по&nbsp;Израилю  и&nbsp;знакомство с&nbsp;его историей</h3>
                   </div>
@@ -183,7 +187,7 @@
                     <picture>
                       <source type="image/webp" srcset="img/life-2@1x.webp 1x, img/life-2@2x.webp 2x">
                         <!--по высоте 1х: 400px; 2x: 800px -->
-                      <img src="img/life-2@1x.png" srcset="img/life-2@2x.png 2x" width="211" height="318" alt="Изучение иврита" data-object-fit="cover">
+                      <img src="img/life-2@1x.png" srcset="img/life-2@2x.png 2x" loading="lazy" width="211" height="318" alt="Изучение иврита" data-object-fit="cover">
                     </picture>
                     <h3>Изучение иврита</h3>
                   </div>
@@ -191,7 +195,7 @@
                     <picture>
                       <source type="image/webp" srcset="img/life-3@1x.webp 1x, img/life-3@2x.webp 2x">
                         <!--по высоте 1х: 400px; 2x: 800px -->
-                      <img src="img/life-3@1x.png" srcset="img/life-3@2x.png 2x" width="411" height="318" alt="Обучение современным навыкам и профессиям" data-object-fit="cover">
+                      <img src="img/life-3@1x.png" srcset="img/life-3@2x.png 2x" loading="lazy" width="411" height="318" alt="Обучение современным навыкам и профессиям" data-object-fit="cover">
                     </picture>
                     <h3>Обучение современным навыкам и профессиям</h3>
                   </div>
@@ -199,7 +203,7 @@
                     <picture>
                       <source type="image/webp" srcset="img/life-4@1x.webp 1x, img/life-4@2x.webp 2x">
                         <!--по высоте 1х: 400px; 2x: 800px -->
-                      <img src="img/life-4@1x.png" srcset="img/life-4@2x.png 2x" width="411" height="318" alt="Совместные творческие проекты  с израильской молодёжью" data-object-fit="cover">
+                      <img src="img/life-4@1x.png" srcset="img/life-4@2x.png 2x" loading="lazy" width="411" height="318" alt="Совместные творческие проекты  с израильской молодёжью" data-object-fit="cover">
                     </picture>
                     <h3>Совместные творческие проекты  с&nbsp;израильской молодёжью</h3>
                   </div>
@@ -207,13 +211,13 @@
                     <picture>
                       <source type="image/webp" srcset="img/life-5@1x.webp 1x, img/life-5@2x.webp 2x">
                         <!--по высоте 1х: 400px; 2x: 800px -->
-                      <img src="img/life-5@1x.png" srcset="img/life-5@2x.png 2x" width="214" height="318" alt="Развитие  лидерства" data-object-fit="cover">
+                      <img src="img/life-5@1x.png" srcset="img/life-5@2x.png 2x" loading="lazy" width="214" height="318" alt="Развитие  лидерства" data-object-fit="cover">
                     </picture>
                     <h3>Развитие  лидерства</h3>
                   </div>
 
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="life__pagination swiper-pagination"></div>
             </div>
           </section>
         </div>
@@ -311,7 +315,7 @@
                   <picture>
                     <source type="image/webp" srcset="img/reviews@1x.webp 1x, img/reviews@2x.webp 2x">
                       <!--1х: 364px; 2x: 728px -->
-                    <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" width="364" height="480" alt="Ольга Михайлова">
+                    <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" loading="lazy" width="364" height="480" alt="Ольга Михайлова">
                   </picture>
                   <div class="blockquote__content">
                     <cite class="blockquote__author">
@@ -329,7 +333,7 @@
                   <picture>
                     <source type="image/webp" srcset="img/reviews@1x.webp 1x, img/reviews@2x.webp 2x">
                       <!--1х: 364px; 2x: 728px -->
-                    <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" width="364" height="480" alt="Ольга Михайлова">
+                    <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" loading="lazy" width="364" height="480" alt="Ольга Михайлова">
                   </picture>
                   <div class="blockquote__content">
                     <cite class="blockquote__author">
@@ -347,7 +351,7 @@
                   <picture>
                     <source type="image/webp" srcset="img/reviews@1x.webp 1x, img/reviews@2x.webp 2x">
                       <!--1х: 364px; 2x: 728px -->
-                    <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" width="364" height="480" alt="Ольга Михайлова">
+                    <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" loading="lazy" width="364" height="480" alt="Ольга Михайлова">
                   </picture>
                   <div class="blockquote__content">
                     <cite class="blockquote__author">
@@ -365,7 +369,7 @@
                   <picture>
                     <source type="image/webp" srcset="img/reviews@1x.webp 1x, img/reviews@2x.webp 2x">
                       <!--1х: 364px; 2x: 728px -->
-                    <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" width="364" height="480" alt="Ольга Михайлова">
+                    <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" loading="lazy" width="364" height="480" alt="Ольга Михайлова">
                   </picture>
                   <div class="blockquote__content">
                     <cite class="blockquote__author">
@@ -383,7 +387,7 @@
                   <picture>
                     <source type="image/webp" srcset="img/reviews@1x.webp 1x, img/reviews@2x.webp 2x">
                       <!--1х: 364px; 2x: 728px -->
-                    <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" width="364" height="480" alt="Ольга Михайлова">
+                    <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" loading="lazy" width="364" height="480" alt="Ольга Михайлова">
                   </picture>
                   <div class="blockquote__content">
                     <cite class="blockquote__author">
@@ -401,7 +405,7 @@
                   <picture>
                     <source type="image/webp" srcset="img/reviews@1x.webp 1x, img/reviews@2x.webp 2x">
                       <!--1х: 364px; 2x: 728px -->
-                    <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" width="364" height="480" alt="Ольга Михайлова">
+                    <img class="blockquote__image" src="img/reviews@1x.png" srcset="img/reviews@2x.png 2x" loading="lazy" width="364" height="480" alt="Ольга Михайлова">
                   </picture>
                   <div class="blockquote__content">
                     <cite class="blockquote__author">
@@ -418,8 +422,20 @@
 
             <div class="reviews__pagination swiper-pagination"></div>
 
-            <div class="reviews__button reviews__button--prev swiper-button-prev"></div>
-            <div class="reviews__button reviews__button--next swiper-button-next"></div>
+            <div class="reviews__navigation">
+              <button class="reviews__button reviews__button--prev" type="button">
+                 <span class="visually-hidden">Предыдущий отзыв</span>
+                 <svg class="reviews__button-svg" width="11" height="18">
+                   <use xlink:href="#icon-arrow-left"></use>
+                 </svg>
+               </button>
+               <button class="reviews__button reviews__button--next" type="button">
+                 <span class="visually-hidden">Следующий отзыв</span>
+                 <svg class="reviews__button-svg" width="11" height="18">
+                   <use xlink:href="#icon-arrow-left"></use>
+                 </svg>
+               </button>
+            </div>
           </div>
 
           <section class="reviews__socials socials socials--small">
@@ -466,7 +482,7 @@
               <picture>
                 <source type="image/webp" srcset="img/curator@1x.webp 1x, img/curator@2x.webp 2x">
                   <!--1х: 112px; 2x: 224px -->
-                <img class="curator__image" src="img/curator@1x.jpg" srcset="img/curator@2x.jpg 2x" width="112" height="112" alt="Куратор Анна Горелик" data-object-fit="cover">
+                <img class="curator__image" src="img/curator@1x.jpg" srcset="img/curator@2x.jpg 2x" loading="lazy" width="112" height="112" alt="Куратор Анна Горелик" data-object-fit="cover">
               </picture>
               <div class="curator__about">
                 <p class="curator__name">
@@ -512,7 +528,7 @@
             <picture>
               <source type="image/webp" srcset="img/map@1x.webp 1x, img/map@2x.webp 2x">
                 <!--1х: 702px; 2x: 1404px -->
-              <img class="details__map" src="img/map@1x.png" srcset="img/map@2x.png 2x" width="702" height="448" alt="Мы находимся по адресу: Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»" data-object-fit="cover">
+              <img class="details__map" src="img/map@1x.png" srcset="img/map@2x.png 2x" loading="lazy" width="702" height="448" alt="Мы находимся по адресу: Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»" data-object-fit="cover">
             </picture>
           </div>
 
@@ -550,7 +566,7 @@
             <picture>
               <source type="image/webp" srcset="img/logo-gray@1x.webp 1x, img/logo-gray@2x.webp 2x">
                 <!-- 1х: 99px; 2x: 198px -->
-              <img class="logo__image" src="img/logo-gray@1x.png" srcset="img/logo-gray@2x.png 2x" width="85" height="27" alt="Логотип компании Masa Israel">
+              <img class="logo__image" src="img/logo-gray@1x.png" srcset="img/logo-gray@2x.png 2x" loading="lazy" width="85" height="27" alt="Логотип компании Masa Israel">
             </picture>
           </a>
           <p class="footer__copyright">Copyright someDesignCompany &copy;2019</p>
@@ -650,12 +666,7 @@
       </div>
     </section>
 
-    <!-- Сообщение об ошибке в поле ввода -->
-  <template id="callback__error">
-    <span class="callback__error-message">Ошибка: неверный формат</span>
-  </template>
-
-    <script src="js/vendor.js"></script>
+    <script src="js/vendor.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
