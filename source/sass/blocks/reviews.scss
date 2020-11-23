@@ -44,69 +44,6 @@
   color: rgba($color--dark, 0.74);
 }
 
-.blockquote__image {
-  margin-right: 40px;
-}
-
-.blockquote__content {
-  padding-bottom: 80px;
-}
-
-.blockquote__author {
-  display: flex;
-  flex-direction: column;
-  margin-top: 40px;
-  margin-bottom: 31px;
-}
-
-.blockquote__name {
-  margin-bottom: 9px;
-
-  font-size: 24px;
-  line-height: 36px;
-  font-weight: $font-medium;
-  font-style: normal;
-}
-
-.blockquote__program {
-  font-size: 15px;
-  line-height: 21px;
-  font-style: normal;
-}
-
-.blockquote__program-highlight {
-  margin-right: 9px;
-
-  color: $color--emphasis;
-}
-
-.blockquote__text {
-  margin: 0;
-  margin-bottom: 17px;
-
-  font-size: 17px;
-  line-height: 29px;
-
-  &:last-child {
-    margin-bottom: 16px;
-  }
-}
-
-.blockquote__link {
-  display: block;
-
-  font-size: 17px;
-  line-height: 25px;
-  color: $color--emphasis;
-  text-decoration: underline;
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: #63d3fd;
-  }
-}
-
 .reviews__pagination {
   left: 404px;
   width: 36px;
@@ -193,18 +130,9 @@
   .reviews__title {
     padding-left: 0;
   }
-
-  .blockquote__content {
-    padding-bottom: 50px;
-  }
 }
 
 @media (max-width: 899px) {
-  .blockquote__image {
-    width: 264px;
-    height: auto;
-  }
-
   .reviews__pagination {
     left: 304px;
   }
@@ -233,53 +161,6 @@
   .reviews__blockquote {
     align-items: center;
     flex-direction: column;
-  }
-
-  .blockquote__content {
-    padding-bottom: 0;
-  }
-
-  .blockquote__image {
-    margin-right: 0;
-    margin-bottom: 24px;
-    padding-bottom: 34px;
-    width: auto;
-    height: 320px;
-  }
-
-  .blockquote__author {
-    margin-top: 0;
-    margin-bottom: 23px;
-  }
-
-  .blockquote__program {
-    display: block;
-
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  .blockquote__program-highlight {
-    display: block;
-    margin-right: 0;
-  }
-
-  .blockquote__text {
-    margin-bottom: 16px;
-
-    font-size: 16px;
-    line-height: 26px;
-
-    &:last-of-type {
-      margin-bottom: 25px;
-    }
-  }
-
-  .blockquote__link {
-    margin-bottom: 22px;
-
-    font-size: 16px;
-    line-height: 24px;
   }
 
   .reviews__pagination {

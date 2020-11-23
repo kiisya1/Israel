@@ -37,7 +37,9 @@
   var storageTel = '';
 
   var tabLinkList = document.querySelector('.programs__tabs-list');
-  var tabLinks = tabLinkList.querySelectorAll('.programs__tabs-link');
+  if (tabLinkList) {
+    var tabLinks = tabLinkList.querySelectorAll('.programs__tabs-link');
+  }
   var tabsList = document.querySelector('.programs__programs-list');
 
   var sliderLifeContainer = document.querySelector('.life__container');
@@ -47,7 +49,9 @@
   var sliderReviewsContainer = document.querySelector('.reviews__container');
 
   var questionsList = document.querySelector('.questions__list');
-  var questionsButtons = questionsList.querySelectorAll('.questions__question');
+  if (questionsList) {
+    var questionsButtons = questionsList.querySelectorAll('.questions__question');
+  }
 
   /* Проверка доступности localStorage  */
 
@@ -409,9 +413,11 @@
 
   // Добавляем обработчики на все ссылки
 
-  if (tabLinks.length !== 0) {
-    for (var i = 0; i < tabLinks.length; i++) {
-      addLinkClickHandler(tabLinks[i]);
+  if (tabLinkList) {
+    if (tabLinks.length !== 0) {
+      for (var i = 0; i < tabLinks.length; i++) {
+        addLinkClickHandler(tabLinks[i]);
+      }
     }
   }
 
@@ -456,9 +462,8 @@
 
   if (questionsList) {
     questionsList.classList.remove('questions__list--no-js');
+    var questionsButtonsArray = Array.prototype.slice.call(questionsButtons, 0);
   }
-
-  var questionsButtonsArray = Array.prototype.slice.call(questionsButtons, 0);
 
   var onQuestionsButtonClick = function (evt) {
     var element;
@@ -488,9 +493,11 @@
 
   // Добавляем обработчики на все кнопки аккордеона
 
-  if (questionsButtons.length !== 0) {
-    for (var j = 0; j < questionsButtons.length; j++) {
-      addQuestionsButtonClickHandler(questionsButtons[j]);
+  if (questionsList) {
+    if (questionsButtons.length !== 0) {
+      for (var j = 0; j < questionsButtons.length; j++) {
+        addQuestionsButtonClickHandler(questionsButtons[j]);
+      }
     }
   }
 

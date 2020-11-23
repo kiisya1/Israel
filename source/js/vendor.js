@@ -38,8 +38,8 @@
       var maxCount = str.length * count;
       count = Math.floor(Math.log(count) / Math.log(2));
       while (count) {
-         str += str;
-         count--;
+          str += str;
+          count--;
       }
       str += str.substring(0, maxCount - str.length);
       return str;
