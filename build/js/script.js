@@ -14,20 +14,28 @@
   var body = document.querySelector('body');
   var callBackLink = document.querySelector('#callback_link');
   var callBackModal = document.querySelector('.call-request');
-  var callBackForm = callBackModal.querySelector('.callback__form');
-  var nameInput = callBackForm.querySelector('#name-field');
-  var phoneInput = callBackForm.querySelector('#phone-field');
-  var checkboxInput = callBackForm.querySelector('#agreement-field');
+  if (callBackModal) {
+    var callBackForm = callBackModal.querySelector('.callback__form');
+    var nameInput = callBackForm.querySelector('#name-field');
+    var phoneInput = callBackForm.querySelector('#phone-field');
+    var checkboxInput = callBackForm.querySelector('#agreement-field');
+  }
 
   var successModal = document.querySelector('.success');
-  var successModalButton = successModal.querySelector('.success__button');
+  if (successModal) {
+    var successModalButton = successModal.querySelector('.success__button');
+  }
 
   var goForm = document.querySelector('#go-form');
-  var goPhoneInput = goForm.querySelector('#go-phone-field');
+  if (goForm) {
+    var goPhoneInput = goForm.querySelector('#go-phone-field');
+  }
 
   var detailsForm = document.querySelector('#details-form');
-  var detailsNameInput = detailsForm.querySelector('#details-name-field');
-  var detailsPhoneInput = document.querySelector('#details-phone-field');
+  if (detailsForm) {
+    var detailsNameInput = detailsForm.querySelector('#details-name-field');
+    var detailsPhoneInput = document.querySelector('#details-phone-field');
+  }
 
   var callBackFocusTrap = createFocusTrap(callBackModal);
   var successFocusTrap = createFocusTrap(successModal);
@@ -43,8 +51,10 @@
   var tabsList = document.querySelector('.programs__programs-list');
 
   var sliderLifeContainer = document.querySelector('.life__container');
-  var sliderLifePagination = sliderLifeContainer.querySelector('.swiper-pagination');
-  var sliderLifeWrapper = sliderLifeContainer.querySelector('.swiper-wrapper');
+  if (sliderLifeContainer) {
+    var sliderLifePagination = sliderLifeContainer.querySelector('.swiper-pagination');
+    var sliderLifeWrapper = sliderLifeContainer.querySelector('.swiper-wrapper');
+  }
 
   var sliderReviewsContainer = document.querySelector('.reviews__container');
 

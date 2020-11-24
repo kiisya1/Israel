@@ -2843,7 +2843,7 @@ button.swiper-pagination-bullet {
   background-image: url("../img/bg-questions-bag@1x.png"), url("../img/bg-questions@1x.jpg");
   background-repeat: no-repeat;
   background-position: top 806px left -41px, top center;
-  background-size: 194px, contain; }
+  background-size: 194px, 100%; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .questions {
       background-image: url("../img/bg-questions-bag@2x.png"), url("../img/bg-questions@2x.jpg"); } }
