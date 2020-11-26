@@ -2,17 +2,21 @@
   @include reset-list;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .contacts__item {
-  margin-right: 20px;
+  margin-right: auto;
   padding-top: 13px;
   padding-bottom: 17px;
+  width: 50%;
 
-  &:last-child {
+  &:nth-child(2n+2) {
+    margin-left: auto;
     margin-right: 0;
+
+    text-align: right;
   }
 }
 
@@ -54,11 +58,16 @@
 
   .contacts__item {
     margin-right: 0;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     padding-top: 0;
     padding-bottom: 0;
+    width: 100%;
 
     line-height: 17px;
+
+    &:nth-child(2n+2) {
+      margin-left: 0;
+    }
 
     &:last-child {
       margin-bottom: 0;

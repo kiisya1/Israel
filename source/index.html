@@ -182,7 +182,7 @@
                     <picture>
                       <source type="image/webp" srcset="img/life-1@1x.webp 1x, img/life-1@2x.webp 2x">
                         <!--по высоте 1х: 732px; 2x: 1464px -->
-                      <img src="img/life-1@1x.png" srcset="img/life-1@2x.png 2x" loading="lazy" width="482" height="732" alt="Экскурсии по Израилю" data-object-fit="cover">
+                      <img class="life__img" src="img/life-1@1x.png" srcset="img/life-1@2x.png 2x" loading="lazy" width="482" height="732" alt="Экскурсии по Израилю" data-object-fit="cover">
                     </picture>
                     <h3>Экскурсии по&nbsp;Израилю и&nbsp;знакомство с&nbsp;его историей</h3>
                   </div>
@@ -190,7 +190,7 @@
                     <picture>
                       <source type="image/webp" srcset="img/life-2@1x.webp 1x, img/life-2@2x.webp 2x">
                         <!--по высоте 1х: 400px; 2x: 800px -->
-                      <img src="img/life-2@1x.png" srcset="img/life-2@2x.png 2x" loading="lazy" width="211" height="318" alt="Изучение иврита" data-object-fit="cover">
+                      <img class="life__img" src="img/life-2@1x.png" srcset="img/life-2@2x.png 2x" loading="lazy" width="211" height="318" alt="Изучение иврита" data-object-fit="cover">
                     </picture>
                     <h3>Изучение иврита</h3>
                   </div>
@@ -198,7 +198,7 @@
                     <picture>
                       <source type="image/webp" srcset="img/life-3@1x.webp 1x, img/life-3@2x.webp 2x">
                         <!--по высоте 1х: 400px; 2x: 800px -->
-                      <img src="img/life-3@1x.png" srcset="img/life-3@2x.png 2x" loading="lazy" width="411" height="318" alt="Обучение современным навыкам и профессиям" data-object-fit="cover">
+                      <img class="life__img" src="img/life-3@1x.png" srcset="img/life-3@2x.png 2x" loading="lazy" width="411" height="318" alt="Обучение современным навыкам и профессиям" data-object-fit="cover">
                     </picture>
                     <h3>Обучение современным навыкам и профессиям</h3>
                   </div>
@@ -206,7 +206,7 @@
                     <picture>
                       <source type="image/webp" srcset="img/life-4@1x.webp 1x, img/life-4@2x.webp 2x">
                         <!--по высоте 1х: 400px; 2x: 800px -->
-                      <img src="img/life-4@1x.png" srcset="img/life-4@2x.png 2x" loading="lazy" width="411" height="318" alt="Совместные творческие проекты с израильской молодёжью" data-object-fit="cover">
+                      <img class="life__img" src="img/life-4@1x.png" srcset="img/life-4@2x.png 2x" loading="lazy" width="411" height="318" alt="Совместные творческие проекты с израильской молодёжью" data-object-fit="cover">
                     </picture>
                     <h3>Совместные творческие проекты с&nbsp;израильской молодёжью</h3>
                   </div>
@@ -214,7 +214,7 @@
                     <picture>
                       <source type="image/webp" srcset="img/life-5@1x.webp 1x, img/life-5@2x.webp 2x">
                         <!--по высоте 1х: 400px; 2x: 800px -->
-                      <img src="img/life-5@1x.png" srcset="img/life-5@2x.png 2x" loading="lazy" width="214" height="318" alt="Развитие лидерства" data-object-fit="cover">
+                      <img class="life__img" src="img/life-5@1x.png" srcset="img/life-5@2x.png 2x" loading="lazy" width="214" height="318" alt="Развитие лидерства" data-object-fit="cover">
                     </picture>
                     <h3>Развитие лидерства</h3>
                   </div>
@@ -608,7 +608,7 @@
 
     <section class="modal modal--closed call-request">
       <div class="modal__body call-request__body">
-        <button class="modal__close" type="button">
+        <button class="modal__close" type="button" tabindex="1">
           <svg class="modal__close-svg" width="18" height="17">
             <use xlink:href="#icon-close"></use>
           </svg>
@@ -621,25 +621,25 @@
           <form class="callback__form" action="https://echo.htmlacademy.ru" method="post" id="callback__modal">
 
             <div class="callback__input-field">
-              <input type="text" name="name" placeholder="Имя" id="name-field" required>
+              <input type="text" name="name" placeholder="Имя" id="name-field" tabindex="1" required>
               <label for="name-field">
                 <span class="visually-hidden">Имя</span>
               </label>
             </div>
 
             <div class="callback__input-field">
-              <input type="tel" name="phone" placeholder="Телефон" pattern="\+7\s?[\(]{1}[0-9]{3}[\)]{1}\s?\d{3}\s?\d{2}\s?\d{2}" id="phone-field" required>
+              <input type="tel" name="phone" placeholder="Телефон" pattern="\+7\s?[\(]{1}[0-9]{3}[\)]{1}\s?\d{3}\s?\d{2}\s?\d{2}" id="phone-field" tabindex="1" required>
               <label for="phone-field">
                 <span class="visually-hidden">Номер телефона</span>
               </label>
             </div>
 
-            <button type="submit">
+            <button type="submit" tabindex="2">
               <span>Перезвоните мне</span>
             </button>
 
             <div class="callback__input-field callback__input-field--checkbox">
-              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement-field" required>
+              <input class="visually-hidden" type="checkbox" name="agreement" id="agreement-field" tabindex="1" required>
               <label for="agreement-field">
                 <span>Нажимая на&nbsp;кнопку, вы&nbsp;даёте согласие на&nbsp;обработку персональных данных</span>
               </label>

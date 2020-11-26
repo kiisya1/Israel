@@ -285,10 +285,17 @@
   .callback--oneline .callback__form {
     flex-wrap: wrap;
 
-    width: 644px;
+    width: 524px;
+  }
+
+  .callback--oneline .callback__input-field {
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 
   .callback--oneline button[type="submit"] {
+    margin: 0 auto;
     margin-top: 16px;
     width: 250px;
   }

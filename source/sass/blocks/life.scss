@@ -276,7 +276,7 @@
 
   .life__item h3 {
     bottom: 24px;
-    left: 16px;
+    left: 50%;
 
     margin: 0;
     width: 256px;
@@ -284,14 +284,8 @@
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-  }
 
-  .life__item:nth-child(7n+4) h3,
-  .life__item:nth-child(7n+3) h3,
-  .life__item:nth-child(9n+9) h3,
-  .life__item:first-child h3 {
-    left: 16px;
-    width: 256px;
+    transform: translateX(-50%);
   }
 
   .life__item:nth-child(7n+3) img {
@@ -304,6 +298,21 @@
 
   .life__list--no-js .life__item {
     margin: 0 15px 30px;
+  }
+
+  .life__item img {
+    margin: 0 auto;
+    width: 288px;
+    height: 400px;
+  }
+
+  .life__item:nth-child(7n+4) h3,
+  .life__item:nth-child(7n+3) h3,
+  .life__item:nth-child(9n+9) h3,
+  .life__item:first-child h3 {
+    left: 50%;
+    width: 256px;
+    transform: translateX(-50%);
   }
 }
 
@@ -324,5 +333,24 @@
     font-size: 16px;
     line-height: 26px;
     text-align: left;
+  }
+
+  .life__item img {
+    margin: 0 auto;
+    width: 288px;
+    height: 400px;
+  }
+
+  .life__item h3 {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .life__item:nth-child(7n+4) h3,
+  .life__item:nth-child(7n+3) h3,
+  .life__item:nth-child(9n+9) h3,
+  .life__item:first-child h3 {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

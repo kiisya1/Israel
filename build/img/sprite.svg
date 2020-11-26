@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
 <linearGradient id="linear_close" x1="4.73684" y1="0.485716" x2="14.6703" y2="3.98809" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC341"/>
-<stop offset="0.963542" stop-color="#FFD701"/>
+<stop offset="20.46%" stop-color="#FFC341"/>
+<stop offset="65.31%" stop-color="#FFD701"/>
 </linearGradient>
 
 <linearGradient id="linear_ok1" x1="16.8421" y1="1.82858" x2="52.588" y2="13.7318" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC341"/>
-<stop offset="0.963542" stop-color="#FFD701"/>
+  <stop offset="20.46%" stop-color="#FFC341"/>
+  <stop offset="65.31%" stop-color="#FFD701"/>
 </linearGradient>
 <linearGradient id="linear_ok2" x1="30.6316" y1="8.02857" x2="55.5095" y2="19.0743" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC341"/>
-<stop offset="0.963542" stop-color="#FFD701"/>
+  <stop offset="20.46%" stop-color="#FFC341"/>
+  <stop offset="65.31%" stop-color="#FFD701"/>
 </linearGradient>
 </defs><symbol id="icon-arrow-down" viewBox="0 0 17 11">
 <path d="M1 1L8.5 9L16 1" stroke="#1FC0FC" stroke-width="2"/>

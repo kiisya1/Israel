@@ -444,8 +444,14 @@
     if ((screenWidth < (1024)) && (mySwiper === 0)) {
       sliderLifePagination.classList.remove('swiper-pagination-lock');
       mySwiper = new Swiper('.life__container', {
-        slidesPerView: 'auto',
+        slidesPerView: 2,
         spaceBetween: 30,
+        breakpoints: {
+          // when window width is <= 767px
+          767: {
+            slidesPerView: 1
+          }
+        },
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
