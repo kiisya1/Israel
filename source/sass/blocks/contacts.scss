@@ -20,6 +20,20 @@
   }
 }
 
+.contacts__phones-list,
+.contacts__links-list {
+  @include reset-list;
+}
+
+.contacts__phones-item,
+.contacts__links-item {
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .contacts__link {
   line-height: 18px;
   color: $color--base;

@@ -17,7 +17,8 @@
 .header__nav {
   position: relative;
 
-  margin-bottom: 452px;
+  margin-bottom: 55px;
+  min-height: 452px;
 }
 
 .header__logo {
@@ -101,8 +102,9 @@
   }
 
   .header__nav {
-    margin-bottom: 273px;
     display: flex;
+    margin-bottom: 42px;
+    min-height: 273px;
   }
 
   .header__contacts {
